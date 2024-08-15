@@ -7,9 +7,10 @@ const Skills = ({ skills }) => {
           : "grid-cols-3 max-sm:grid-cols-1"
       } outline outline-4 outline-transparent transition-all duration-500 ease-in-out hover:outline-primary-black max-xl:px-4 max-sm:gap-y-5`}
     >
-      {skills.map(({ photo, title, descr }) => {
+      {skills.map(({ id, photo, title, descr }) => {
         return (
           <div
+            key={id}
             className={`flex gap-5 px-5 py-8 max-4xl:px-4 max-4xl:py-6 lg:max-3xl:py-3 max-2xl:px-5 lg:max-xl:px-1 ${skills.length < 4 && "flex-col items-center"} max-md:px-0 max-md:py-4 max-sm:gap-3 max-sm:py-0`}
           >
             <img
